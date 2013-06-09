@@ -1,0 +1,21 @@
+name = Foundation Example
+description = A simple, fluid, three column theme utilizing foundation
+package = Foundation
+version = 0.1
+core = 7.x
+stylesheets[screen][] = stylesheets/style.css
+stylesheets[screen][] = stylesheets/app.css
+stylesheets[screen][] = stylesheets/normalize.css
+settings[shortcut_module_link] = 1
+regions[content] = Content
+regions[help] = Help
+regions[page_header] = Page Header
+regions[page_bottom] = Page Footer
+regions[sidebar_left] = Page Left Sidebar
+regions[sidebar_right] = Page Right Sidebar
+regions_hidden[] = sidebar_first
+
+;
+version = "7.22"
+project = "Foundation Presentation"
+
