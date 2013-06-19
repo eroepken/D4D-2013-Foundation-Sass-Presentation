@@ -1,0 +1,29 @@
+@media #{$screen} {
+  .title{
+    color: $gry_lght;
+    text-align: center;
+    font-size: emCalc(60px);
+    text-shadow: 2px 3px 2px #000; 
+  }
+  .main-nav ul.row{
+    border-top: emCalc(10px) solid $yllw_drk;
+    li.leaf{
+      display: inline-block;
+      list-style: none;
+      margin-top: 0;
+      padding-top: 0;
+      a{
+        color: $yllw_drk;
+        width: 100%;
+        background: $gry_mdm;
+        display: block;
+        text-align: center;
+      }
+      a.active{
+        background: $gry_lght;
+        color: $gry_drk;
+      }
+
+    }
+  }
+}

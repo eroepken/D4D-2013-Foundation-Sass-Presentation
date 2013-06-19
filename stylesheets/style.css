@@ -1,0 +1,32 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Futura"; }
+
+p, a, li, span {
+  font-family: "Arial"; }
+
+body {
+  background: #333333; }
+
+@media only screen {
+  .title {
+    color: #cccccc;
+    text-align: center;
+    font-size: 3.75em;
+    text-shadow: 2px 3px 2px #000; }
+
+  .main-nav ul.row {
+    border-top: 0.625em solid #ffcc66; }
+    .main-nav ul.row li.leaf {
+      display: inline-block;
+      list-style: none;
+      margin-top: 0;
+      padding-top: 0; }
+      .main-nav ul.row li.leaf a {
+        color: #ffcc66;
+        width: 100%;
+        background: #666666;
+        display: block;
+        text-align: center; }
+      .main-nav ul.row li.leaf a.active {
+        background: #cccccc;
+        color: #333333; } }
