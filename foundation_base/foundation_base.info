@@ -1,5 +1,5 @@
 name = Foundation Base Theme
-description = This is a base theme made to use Foundation 4.
+description = This is a simple base theme made using Foundation 4.
 core = 7.x
 
 stylesheets[all][] = stylesheets/foundation.css
@@ -9,3 +9,21 @@ scripts[] = js/jquery-migrate-1.2.1.min.js
 
 ; Include modernizr as a Foundation dependency.
 scripts[] = js/vendor/custom.modernizr.js
+
+; Settings by which the theme checks if these scripts should be included.
+settings[foundation_base_js_abide] = 0
+settings[foundation_base_js_alerts] = 0
+settings[foundation_base_js_clearing] = 0
+settings[foundation_base_js_cookie] = 0
+settings[foundation_base_js_dropdown] = 0
+settings[foundation_base_js_forms] = 0
+settings[foundation_base_js_interchange] = 0
+settings[foundation_base_js_joyride] = 0
+settings[foundation_base_js_magellan] = 0
+settings[foundation_base_js_orbit] = 0
+settings[foundation_base_js_placeholder] = 0
+settings[foundation_base_js_reveal] = 0
+settings[foundation_base_js_section] = 0
+settings[foundation_base_js_tooltips] = 0
+settings[foundation_base_js_topbar] = 0
+settings[foundation_base_js_respond] = 0
