@@ -1,0 +1,11 @@
+name = Foundation Base Theme
+description = This is a base theme made to use Foundation 4.
+core = 7.x
+
+stylesheets[all][] = stylesheets/foundation.css
+
+; Include jQuery Migrate to help Drupal's JS out.
+scripts[] = js/jquery-migrate-1.2.1.min.js
+
+; Include modernizr as a Foundation dependency.
+scripts[] = js/vendor/custom.modernizr.js
