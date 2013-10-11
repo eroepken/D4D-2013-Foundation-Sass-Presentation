@@ -46,22 +46,56 @@ function foundation_base_preprocess_page(&$variables) {
     'group' => JS_THEME,
   ));
 
-  /* If the following plugins are checked on in the theme settings, include 
-  their script. */
-  $scripts = array('abide','alerts','clearing','cookie','dropdown','forms','interchange','joyride','magellan','orbit','placeholder','reveal','section','tooltips','topbar',
-  );
+    /* If the following plugins are checked on in the theme settings, include the
+  script. */
+  // Abide: http://foundation.zurb.com/docs/components/abide.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.abide.js', $js_options);
+  
+  // Alerts: http://foundation.zurb.com/docs/components/alert-boxes.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.alerts.js', $js_options);
+  
+  // Clearing: http://foundation.zurb.com/docs/components/clearing.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.clearing.js', $js_options);
+  
+  // Cookie: Optional, only if Joyride is selected.
+  drupal_add_js($theme_path . '/js/foundation/foundation.cookie.js', $js_options);
+  
+  // Dropdown: http://foundation.zurb.com/docs/components/dropdown.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.dropdown.js', $js_options);
+  
+  // Forms: http://foundation.zurb.com/docs/components/custom-forms.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.forms.js', $js_options);
+  
+  // Interchange: http://foundation.zurb.com/docs/components/interchange.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.interchange.js', $js_options);
+  
+  // Joyride: http://foundation.zurb.com/docs/components/joyride.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.joyride.js', $js_options);
+  
+  // Magellan: http://foundation.zurb.com/docs/components/magellan.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.magellan.js', $js_options);
+  
+  // Orbit: http://foundation.zurb.com/docs/components/orbit.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.orbit.js', $js_options);
+  
+  // Orbit: http://foundation.zurb.com/docs/components/orbit.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.orbit.js', $js_options);
+  
+  // Placeholder: Support for HTML 5 placeholder attributes in older browsers.
+  drupal_add_js($theme_path . '/js/foundation/foundation.placeholder.js', $js_options);
+  
+  // Reveal: http://foundation.zurb.com/docs/components/reveal.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.reveal.js', $js_options);
+  
+  // Section: http://foundation.zurb.com/docs/components/section.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.section.js', $js_options);
+  
+  // Tooltips: http://foundation.zurb.com/docs/components/tooltips.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.tooltips.js', $js_options);
+  
+  // Topbar: http://foundation.zurb.com/docs/components/top-bar.html
+  drupal_add_js($theme_path . '/js/foundation/foundation.topbar.js', $js_options);
 
-  /* This looks for the theme setting toggle for each of the script names 
-  listed above and includes the file if the toggle is on. */
-  foreach ($scripts as $script) {
-    if (theme_get_setting('foundation_base_js_' . $script)) {
-      drupal_add_js($theme_path . '/js/foundation/foundation.' . $script . '.js', $js_options);
-    }
-  }
-
-  /* Add respond.min.js if it's toggled on. This one is separate due to it's
-  different name structure and location. */
-  if (theme_get_setting('foundation_base_js_respond')) {
-    drupal_add_js($theme_path . '/js/respond.min.js', $js_options);
-  }
+  // Respond: https://github.com/scottjehl/Respond
+  drupal_add_js($theme_path . '/js/respond.min.js');
 }
