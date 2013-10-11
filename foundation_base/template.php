@@ -78,9 +78,6 @@ function foundation_base_preprocess_page(&$variables) {
   // Orbit: http://foundation.zurb.com/docs/components/orbit.html
   drupal_add_js($theme_path . '/js/foundation/foundation.orbit.js', $js_options);
   
-  // Orbit: http://foundation.zurb.com/docs/components/orbit.html
-  drupal_add_js($theme_path . '/js/foundation/foundation.orbit.js', $js_options);
-  
   // Placeholder: Support for HTML 5 placeholder attributes in older browsers.
   drupal_add_js($theme_path . '/js/foundation/foundation.placeholder.js', $js_options);
   

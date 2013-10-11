@@ -108,20 +108,24 @@
     <nav class="row">
       <section class="large-12 columns">
         <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
+      </section>
+      <section class="large-12 columns hide-for-small">
         <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
       </section>
     </nav>
   <?php endif; ?>
 
   <?php if ($breadcrumb): ?>
-    <nav id="breadcrumb">
+    <nav id="breadcrumb" class="row">
       <section class="large-12 columns">
         <?php print $breadcrumb; ?>
       </section>
     </nav>
   <?php endif; ?>
 
-  <?php print $messages; ?>
+  <section class="row">
+    <?php print $messages; ?>
+  </section>
 
   <main class="row">
     <section class="large-6 columns push-3">
@@ -138,15 +142,15 @@
     </section>
 
     <?php if ($page['sidebar_first']): ?>
-      <section class="large-3 columns pull-9 sidebar-first">
+      <aside class="large-3 columns pull-6 sidebar-first">
         <?php print render($page['sidebar_first']); ?>
-      </section>
+      </aside>
     <?php endif; ?>
 
     <?php if ($page['sidebar_second']): ?>
-      <section class="large-3 columns sidebar-second">
+      <aside class="large-3 columns sidebar-second">
         <?php print render($page['sidebar_second']); ?>
-      </section>
+      </aside>
     <?php endif; ?>
 
   </main>
