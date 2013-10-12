@@ -38,13 +38,7 @@ function foundation_base_preprocess_page(&$variables) {
   );
 
   // Include the Foundation base JS file.
-  drupal_add_js($theme_path . '/js/foundation.min.js', $js_options);
-
-  drupal_add_js('jQuery(document).foundation();', array(
-    'type' => 'inline',
-    'scope' => 'footer',
-    'group' => JS_THEME,
-  ));
+  drupal_add_js($theme_path . '/js/foundation/foundation.js', $js_options);
 
     /* If the following plugins are checked on in the theme settings, include the
   script. */
@@ -95,4 +89,10 @@ function foundation_base_preprocess_page(&$variables) {
 
   // Respond: https://github.com/scottjehl/Respond
   drupal_add_js($theme_path . '/js/respond.min.js');
+
+  drupal_add_js('jQuery(document).foundation();', array(
+    'type' => 'inline',
+    'scope' => 'footer',
+    'group' => JS_THEME,
+  ));
 }
