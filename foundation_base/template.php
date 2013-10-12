@@ -40,7 +40,7 @@ function foundation_base_preprocess_page(&$variables) {
   // Include the Foundation base JS file.
   drupal_add_js($theme_path . '/js/foundation/foundation.js', $js_options);
 
-    /* If the following plugins are checked on in the theme settings, include the
+  /* If the following plugins are checked on in the theme settings, include the
   script. */
   // Abide: http://foundation.zurb.com/docs/components/abide.html
   drupal_add_js($theme_path . '/js/foundation/foundation.abide.js', $js_options);
@@ -86,6 +86,11 @@ function foundation_base_preprocess_page(&$variables) {
   
   // Topbar: http://foundation.zurb.com/docs/components/top-bar.html
   drupal_add_js($theme_path . '/js/foundation/foundation.topbar.js', $js_options);
+
+  /* Or, if you choose, you can just use the minified version, which includes
+  foundation.js and all of the previous plugins. Don't forget to comment them
+  out or remove them! */
+  // drupal_add_js($theme_path . '/js/foundation.min.js', $js_options);
 
   // Respond: https://github.com/scottjehl/Respond
   drupal_add_js($theme_path . '/js/respond.min.js');
