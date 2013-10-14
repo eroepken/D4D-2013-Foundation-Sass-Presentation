@@ -1,0 +1,60 @@
+$crumbs: #4E2008;
+$bakeshop: #A23607;
+$tonal: #EFEACC;
+$badsaddle: #7A6A46;
+$splitpea: #4B4934;
+
+$primaryfont: Georgia;
+$secondaryfont: Arial;
+
+body {
+  font-family: $primaryfont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $crumbs;
+  font-family: $primaryfont;
+}
+
+a {
+  color: $bakeshop;
+
+  &:hover {
+    color: $crumbs;
+  }
+}
+
+main .node {
+  border-top: 1px solid $crumbs;
+  margin-bottom: 15px;
+
+  &:first-child {
+    border-top: 0;
+  }
+}
+
+section {
+  background: $tonal;
+  border: 1px solid $badsaddle;
+}
+
+aside {
+  background: $badsaddle;
+
+  a {
+    color: $tonal;
+
+    &:hover {
+      color: $crumbs;
+    }
+  }
+
+  table, tr.odd, tr.even {
+    background: $badsaddle;
+    border: 0;
+  }
+
+  .marker {
+    color: $bakeshop;
+  }
+}
