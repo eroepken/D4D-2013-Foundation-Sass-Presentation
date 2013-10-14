@@ -1,0 +1,8 @@
+name = Foundation Demo Theme
+description = This is a demo theme made 
+core = 7.x
+base theme = foundation_base
+
+; Adding the scss file to the stylesheets list in the info file will allow the
+; Sassy and Prepro modules to compile the CSS and cache it.
+stylesheets[all][] = stylesheets/style.scss
